@@ -1,3 +1,28 @@
-theme: jekyll-theme-minimal
-title : Agrégation Physique Marseille – Spéciale docteurs
-description: Ressources pour l'agrégation physique spéciale docteurs
+title: Session 2026
+description: Agrégation Spéciale Docteurs
+theme: just-the-docs
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# logo: "/assets/images/logo.svg"
+favicon_ico: "/assets/images/logo.svg"
+url: "https://session2026.github.io"
+baseurl: "/AgregSpePhyMarseille"
+
+# color_scheme: light
+color_scheme: custom
+
+search_enabled: true
+
+aux_links:
+  GitHub:
+    - https://github.com/AgregSpePhyMarseille/session2026.github.io
+
+nav_sort: case_insensitive
+
+heading_anchors: true
+
+footer_content: "Ressources pédagogiques - Agrégation Spéciale Docteurs - Marseille © 2026"

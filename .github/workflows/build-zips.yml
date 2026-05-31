@@ -1,0 +1,43 @@
+name: Build ZIP archives
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'assets/downloads/*.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  build-zips:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create download directory
+        run: mkdir -p assets/downloads
+
+      - name: Build Chimie Images archive
+        run: |
+          zip -r assets/downloads/images-chimie.zip chimie/images
+
+      - name: Build Physique Images archive
+        run: |
+          zip -r assets/downloads/images-physique.zip physique/images
+
+      - name: Build Chimie Python Codes archive
+        run: |
+          zip -r assets/downloads/codes-chimie.zip chimie/codes
+
+      - name: Build Physique Python Codes archive
+        run: |
+          zip -r assets/downloads/codes-physique.zip physique/codes
+
+      - name: Commit generated archives
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update generated ZIP archives"

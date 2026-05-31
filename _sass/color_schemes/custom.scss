@@ -1,0 +1,23 @@
+$link-color: #2563eb;
+$btn-primary-color: #2563eb;
+
+$sidebar-color: #f8fafc;
+
+$body-background-color: #ffffff;
+$body-text-color: #1e293b;
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}

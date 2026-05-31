@@ -1,0 +1,9 @@
+brew uninstall ruby@3.4
+gem install bundler
+gem install jekyll
+gem install just-the-docs
+gem install webrick
+
+
+bundle install
+bundle exec jekyll serve
