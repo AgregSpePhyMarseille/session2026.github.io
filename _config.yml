@@ -1,6 +1,6 @@
 title: Session 2026
 description: Agrégation Spéciale Docteurs
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 
 plugins:
   - jekyll-feed
