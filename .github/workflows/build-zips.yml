@@ -37,6 +37,14 @@ jobs:
         run: |
           zip -r assets/downloads/codes-physique.zip physique/codes
 
+      - name: Build Chimie Python PDF archive
+        run: |
+          zip -r assets/downloads/pdf-chimie.zip chimie/pdf
+
+      - name: Build Physique Python PDF archive
+        run: |
+          zip -r assets/downloads/pdf-physique.zip physique/pdf
+
       - name: Commit generated archives
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
